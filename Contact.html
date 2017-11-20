@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gregory Games Ltd</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+   type="text/css"
+   href="Template.css" />
+</head>
+
+<body>
+<div class="sidenav">
+  <a href="index1.html">Home</a>
+  <a href="About.html">About Us</a>
+  <a href="Games.html">Our Games</a>
+  <a href="Contact.html">Contact Us</a>
+</div>
+<div class="header">
+<img src="gregorylogo_black.png" alt="Logo">
+  <h1>Gregory Games Ltd</h1>
+</div>
+
+<div class="content">
+  <p>Powered by Unity.</p>
+  <p>Tell us what you think</p>
+<script>
+function checkvalue() { 
+    var feedback = document.getElementById('feedback').value; 
+	var email = document.getElementById('email').value; 
+    if(!email.match(/\S/)) {
+        alert ('Please enter your email address');
+        return false;
+    } else if(!email.match(/\S@\S.\S/)) {
+        alert ('Please enter a valid email address');
+        return false;
+    } else if(!feedback.match(/\S/)) {
+        alert ('Please enter your feedback');
+        return false;
+    } else {
+        alert("Thank you for your feedback");
+        return true;
+    }
+}
+</script>
+<form onsubmit="return checkvalue(this)">
+  <p>Email Address:</p> <input id="email" type="text" name="email" />
+  <p>Feedback:</p>
+    <input name="feedback" type="text" value='' id="feedback">
+    <input type="submit" value="Click me to submit your feedback"/>
+</form>
+  </div>
+
+</body>
+</html>
+
